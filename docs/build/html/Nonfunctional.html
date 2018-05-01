@@ -1,5 +1,6 @@
 
 
+
 <!DOCTYPE html>
 <!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
 <!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
@@ -8,7 +9,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Software Requirements Specification for OMG Version 0.1 &mdash; hello [0.1] documentation</title>
+  <title>Index &mdash; hello [0.1] documentation</title>
   
 
   
@@ -27,7 +28,7 @@
   
     <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="index" title="Index" href="#" />
     <link rel="search" title="Search" href="search.html" /> 
 
   
@@ -47,7 +48,7 @@
           
 
           
-            <a href="#" class="icon icon-home"> hello
+            <a href="index.html" class="icon icon-home"> hello
           
 
           
@@ -72,14 +73,16 @@
 
         <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
           
-              <div class="local-toc"><ul>
-<li><a class="reference internal" href="#">Software Requirements Specification for OMG Version 0.1</a></li>
-<li><a class="reference internal" href="#indices-and-tables">Indices and tables</a></li>
-</ul>
-</div> 
+            
+            
+              
+            
+            
+              <!-- Local TOC -->
+              <div class="local-toc"></div>
             
           
-        </div> 
+        </div>
       </div>
     </nav>
 
@@ -89,7 +92,7 @@
       <nav class="wy-nav-top" aria-label="top navigation">
         
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="#">hello</a>
+          <a href="index.html">hello</a>
         
       </nav>
 
@@ -118,16 +121,14 @@
 
   <ul class="wy-breadcrumbs">
     
-      <li><a href="#">Docs</a> &raquo;</li>
+      <li><a href="index.html">Docs</a> &raquo;</li>
         
-      <li>Software Requirements Specification for OMG Version 0.1</li>
+      <li>Non-functional Requirements</li>
     
     
       <li class="wy-breadcrumbs-aside">
         
             
-            <a href="_sources/index.rst.txt" rel="nofollow"> View page source</a>
-          
         
       </li>
     
@@ -136,52 +137,50 @@
   
   <hr/>
 </div>
-        
-		<div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
+
+<h2 id="index">7.1 Response time</h2>
+Users can access this system through the network. Users can upload the file to network and
+ network will response a table of differentially expressed genes and a scatter plot.<br><br>
+ <h2 id="index">7.2 User Interface</h2>
+ 7.2.1 OMG's user interface design is concise and elegant, the user can according to the mood and personal aesthe
+ tic to switch the theme of different style, mostly in the form of simple and comfortable style, interface design is clear, conve
+ nient for users to quickly find the corresponding information. All design will be aimed at the user's needs.The web application has a simple i
+ nterface with only one button [Upload and Go]. Our scientists uploaded a plain text file containing two samples of gene expression levels representing two 
+ experimental conditions. After receiving the document, the software will return a table of differentially expressed genes and scatter plots of these ge
+ nes, whose X-axis is controlled and the Y-axis is treated. Given an invalid gene expression, the web application will return a page informing the user
+ to provide the correct format.<br><br>
+ <h2 id="index">7.3 Confidentiality policy</h2>
+ 7.3.1 authority control<br>
+According to the role of different users, set the appropriate permissions, the important operation of the user to do 
+the corresponding log records for the view, the 
+non privileged user prohibit the use of the system.<br>
+7.3.2 important data encryption<br>
+Some important data are encrypted according to a certain algorithm, such as household registration order, important parameters, etc.<br>
+7.3.3 Data backup <br>
+It allows users to backup and restore data to make up for data damage and loss.<br>
+7.3.4 Log log<br>
+This system should be able to record all errors occurred during system operation, including native errors and network errors. Th
+ese error records are easy to find the cause of the error. Logs also record key operational information of users.<br>
+7.3.5 Reduce the risk of privacy disclosure.<br>
+In order to prevent unintended actions (such as the "automatic navigation off" command in the field) and the invalid action (a desired "aut
+omatic navigation off" command, the failure CSCI must provide security measures.
+<div class="genindex-jumpbox">
  
-
-
- <div class="section" id="welcome-to-hello-s-documentation">
-<h1>Software Requirements Specification for OMG Version 0.1<a class="headerlink" href="#welcome-to-hello-s-documentation" title="Permalink to this headline">¶</a></h1>
-<div class="toctree-wrapper compound">
-</div>
 </div>
 
 
-
-
-<div class="section" id="indices-and-tables">
-<h1>Indices and tables<a class="headerlink" href="#indices-and-tables" title="Permalink to this headline">¶</a></h1>
-<h2><ul class="simple">
-<li><a class="reference internal" href="Introduction.html"><span class="std std-ref">1.Introduction</span></a></li><br><br>
-<li><a class="reference internal" href="Definitions.html"><span class="std std-ref">2.System Definitions</span></a></li><br><br>
-<li><a class="reference internal" href="Environment.html"><span class="std std-ref">3.Running Environment</span></a></li><br><br>
-<li><a class="reference internal" href="Functional.html"><span class="std std-ref">4.Functional Requirements</span></a></li><br><br>
-<li><a class="reference internal" href="MainUse.html"><span class="std std-ref">5.Main Use Case Of The System</span></a></li><br><br>
-<li><a class="reference internal" href="Handling.html"><span class="std std-ref">6.Exceptions And Handling</span></a></li><br><br>
-<li><a class="reference internal" href="Nonfunctional.html"><span class="std std-ref">7.Non-functional Requirements</span></a></li><br><br>
-<li><a class="reference internal" href="Constraints.html"><span class="std std-ref">8.Implementation Constraints</span></a></li><br><br>
-<li><a class="reference internal" href="Cases.html"><span class="std std-ref">9.Change Cases</span></a></li><br><br>
-<li><a class="reference internal" href="Milestones.html"><span class="std std-ref">10.Milestones</span></a></li><br><br>
-<li><a class="reference internal" href="References.html"><span class="std std-ref">11.References</span></a></li><br><br>
-
-</h2>
-</ul>
-</div>
-         </div>
+           </div>
            
           </div>
-        
+          <footer>
+  
 
-
-
-	
-
-	<footer>
   <hr/>
- 
+
+  
   Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
 
 </footer>
@@ -208,9 +207,7 @@
             SOURCELINK_SUFFIX: '.txt'
         };
     </script>
-    
-
-	<script type="text/javascript" src="_static/jquery.js"></script>
+      <script type="text/javascript" src="_static/jquery.js"></script>
       <script type="text/javascript" src="_static/underscore.js"></script>
       <script type="text/javascript" src="_static/doctools.js"></script>
 
