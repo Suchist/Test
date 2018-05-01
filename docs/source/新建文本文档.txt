@@ -15,6 +15,6 @@ Software Requirements Specification for OMG Version 0.1
 Indices and tables
 ==================
 
-* :ref:`introduction`
+* :ref:`genindex`
 * :ref:`modindex`
 * :ref:`search`
