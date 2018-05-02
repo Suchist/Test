@@ -80,17 +80,64 @@
               <!-- Local TOC -->
               <div class="local-toc"><ul>
 <li><a class="reference internal" href="#">Software Requirements Specification for OMG Version 0.1</a></li>
-<li><a class="reference internal" href="#introduction">1. Introduction:</a><ul>
-<li><a class="reference internal" href="#purpose">1.1 Purpose:</a></li>
-<li><a class="reference internal" href="#terminology">1.2 Terminology:</a></li>
-<li><a class="reference internal" href="#domain-knowledge">1.3 Domain knowledge:</a><ul>
-<li><a class="reference internal" href="#control-sample">Control sample</a></li>
+<li><a class="reference internal" href="#introduction">1. Introduction</a><ul>
+<li><a class="reference internal" href="#purpose">1.1 Purpose</a></li>
+<li><a class="reference internal" href="#terminology">1.2 Terminology</a></li>
+<li><a class="reference internal" href="#domain-knowledge">1.3 Domain knowledge</a><ul>
+<li><a class="reference internal" href="#control-sample">1.3.1 Control sample</a></li>
+<li><a class="reference internal" href="#treatment-sample">1.3.2 Treatment sample</a></li>
+<li><a class="reference internal" href="#differentially-expressed-genes">1.3.3 Differentially expressed genes</a></li>
+<li><a class="reference internal" href="#up-regulation">1.3.4 Up-regulation</a></li>
+<li><a class="reference internal" href="#logfc">1.3.5 logFC</a></li>
+<li><a class="reference internal" href="#log-2-t-c">1.3.6 log_2 [T/C]</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#overview">1.4 Overview:</a></li>
+<li><a class="reference internal" href="#overview">1.4 Overview</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#indices-and-tables">Indices and tables</a></li>
+<li><a class="reference internal" href="#system-definitions">2.System Definitions</a><ul>
+<li><a class="reference internal" href="#source-and-background-of-the-project">2.1 Source and background of the project</a></li>
+<li><a class="reference internal" href="#user-characteristics">2.2 User characteristics</a></li>
+<li><a class="reference internal" href="#structure-of-the-system">2.3 Structure of the system</a><ul>
+<li><a class="reference internal" href="#data-flow-diagrams">2.3.1 data flow diagrams</a></li>
+<li><a class="reference internal" href="#iop-diagram-input-process-output">2.2.2 IOP diagram (Input Process Output)</a></li>
+<li><a class="reference internal" href="#screen-sketches">2.2.3 Screen sketches</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a class="reference internal" href="#running-environment">3.Running Environment</a><ul>
+<li><a class="reference internal" href="#network-environment">3.1 Network Environment</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#functional-requirements">4.Functional Requirements</a><ul>
+<li><a class="reference internal" href="#data-verification">4.1 Data verification</a></li>
+<li><a class="reference internal" href="#data-processing">4.2 Data processing</a></li>
+<li><a class="reference internal" href="#potential-functional-requirements">4.3 Potential functional requirements</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#main-use-case-of-the-system">5. Main Use Case Of The System</a><ul>
+<li><a class="reference internal" href="#describe-the-user-case">5.1 Describe the user case:</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#exceptions-and-handling">6.Exceptions And Handling</a></li>
+<li><a class="reference internal" href="#non-functional-requirements">7.Non-functional Requirements</a><ul>
+<li><a class="reference internal" href="#response-time">7.1 Response Time</a></li>
+<li><a class="reference internal" href="#user-interface">7.2 User Interface</a></li>
+<li><a class="reference internal" href="#confidentiality-policy">7.3 Confidentiality policy</a><ul>
+<li><a class="reference internal" href="#authority-control">7.3.1 Authority control</a></li>
+<li><a class="reference internal" href="#important-data-encryption">7.3.2 Important data encryption</a></li>
+<li><a class="reference internal" href="#data-backup">7.3.3 Data backup</a></li>
+<li><a class="reference internal" href="#log-log">7.3.4 Log log</a></li>
+<li><a class="reference internal" href="#reduce-the-risk-of-privacy-disclosure">7.3.5 Reduce the risk of privacy disclosure</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a class="reference internal" href="#implementation-constraints">8.Implementation Constraints</a></li>
+<li><a class="reference internal" href="#change-cases">9.Change Cases</a></li>
+<li><a class="reference internal" href="#milestones">10.Milestones</a></li>
+<li><a class="reference internal" href="#references">11.References</a></li>
 </ul>
 </div>
             
@@ -159,19 +206,22 @@
 <h1>Software Requirements Specification for OMG Version 0.1<a class="headerlink" href="#software-requirements-specification-for-omg-version-0-1" title="Permalink to this headline">¶</a></h1>
 <div class="toctree-wrapper compound">
 </div>
+<ul class="simple">
+<li><strong>Group name: The North and the South Fatty</strong></li>
+<li><strong>Yangjie:1934621564&#64;qq.com (Collect material, draw the picture and write.)</strong></li>
+<li><strong>Huhaiwen:2782983179&#64;qq.com(Collect material,write and write rst)</strong></li>
+</ul>
 <table border="1" class="docutils">
 <colgroup>
-<col width="67%" />
-<col width="33%" />
+<col width="60%" />
+<col width="40%" />
 </colgroup>
-<thead valign="bottom">
-<tr class="row-odd"><th class="head">Oh My Genes</th>
-<th class="head">Version 1.0</th>
-</tr>
-</thead>
 <tbody valign="top">
-<tr class="row-even"><td>SRS</td>
-<td>2018.4.28</td>
+<tr class="row-odd"><td>Oh My Genes</td>
+<td>Version 1.0</td>
+</tr>
+<tr class="row-even"><td>Software Requirements Specification</td>
+<td>Date: 2018.4.28</td>
 </tr>
 <tr class="row-odd"><td colspan="2">OMG SRS 1.0</td>
 </tr>
@@ -179,60 +229,223 @@
 </table>
 </div>
 <div class="section" id="introduction">
-<h1>1. Introduction:<a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h1>
+<h1>1. Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="purpose">
-<h2>1.1 Purpose:<a class="headerlink" href="#purpose" title="Permalink to this headline">¶</a></h2>
+<h2>1.1 Purpose<a class="headerlink" href="#purpose" title="Permalink to this headline">¶</a></h2>
 <p>The computer quickly get differentially expressed genes from the gene expression file that scientists
 uploaded To free the scientists from the tedious data calculation, so that they have more energy to engage in
 scientific research,
 so as to improve the experimental efficiency comprehensively.</p>
 </div>
 <div class="section" id="terminology">
-<h2>1.2 Terminology:<a class="headerlink" href="#terminology" title="Permalink to this headline">¶</a></h2>
-<p>Transaction Processing
-Data Processing</p>
+<h2>1.2 Terminology<a class="headerlink" href="#terminology" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>Transaction Processing</li>
+<li>Data Processing</li>
+</ul>
 </div>
 <div class="section" id="domain-knowledge">
-<h2>1.3 Domain knowledge:<a class="headerlink" href="#domain-knowledge" title="Permalink to this headline">¶</a></h2>
+<h2>1.3 Domain knowledge<a class="headerlink" href="#domain-knowledge" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="control-sample">
-<h3>Control sample<a class="headerlink" href="#control-sample" title="Permalink to this headline">¶</a></h3>
+<h3>1.3.1 Control sample<a class="headerlink" href="#control-sample" title="Permalink to this headline">¶</a></h3>
 <p>A cell sample prepared in its normal condition.</p>
-<p>Treatment sample
-A cell sample treated by special chemicals?? or in which some genes are altered.
--Differentially expressed genes
-The genes which have significantly different expression levels between two samples.
-Up-regulation
-a gene is said to be up-regulated if it has higher expression in treatment than in control.
-logFC - log fold change of gene expression.
-log_2 [T/C], where T is the gene expression level from a treatment sample, while C is the gene expression level from a control sample.</p>
+</div>
+<div class="section" id="treatment-sample">
+<h3>1.3.2 Treatment sample<a class="headerlink" href="#treatment-sample" title="Permalink to this headline">¶</a></h3>
+<p>A cell sample treated by special chemicals,or in which some genes are altered.</p>
+</div>
+<div class="section" id="differentially-expressed-genes">
+<h3>1.3.3 Differentially expressed genes<a class="headerlink" href="#differentially-expressed-genes" title="Permalink to this headline">¶</a></h3>
+<p>The genes which have significantly different expression levels between two samples.</p>
+</div>
+<div class="section" id="up-regulation">
+<h3>1.3.4 Up-regulation<a class="headerlink" href="#up-regulation" title="Permalink to this headline">¶</a></h3>
+<p>a gene is said to be up-regulated if it has higher expression in treatment than in control.</p>
+</div>
+<div class="section" id="logfc">
+<h3>1.3.5 logFC<a class="headerlink" href="#logfc" title="Permalink to this headline">¶</a></h3>
+<p>log fold change of gene expression.</p>
+</div>
+<div class="section" id="log-2-t-c">
+<h3>1.3.6 log_2 [T/C]<a class="headerlink" href="#log-2-t-c" title="Permalink to this headline">¶</a></h3>
+<p>where T is the gene expression level from a treatment sample, while C is the gene expression level from a control sample.</p>
 </div>
 </div>
 <div class="section" id="overview">
-<h2>1.4 Overview:<a class="headerlink" href="#overview" title="Permalink to this headline">¶</a></h2>
-<p>The application has a simple interface with only one button. Our scientists uploaded a plain text file containing
-two samples of gene expression levels representing two experimental conditions. After accepting the document,
-the software will return a table and the genes differentially expressed genes of scatter plot, the genes of the x axis</p>
-<blockquote>
-<div>is the control sample, the y axis is to process the sample. Given an invalid gene expression,
-the web application will return a page informing the user to provide the correct format.</div></blockquote>
+<h2>1.4 Overview<a class="headerlink" href="#overview" title="Permalink to this headline">¶</a></h2>
+<p>The application has a simple interface with only one button. Our scientists uploaded a plain text file containing two samples of gene expression levels representing two experimental conditions. After accepting the document,the software will return a table and the genes differentially expressed genes of scatter plot, the genes of the x axis is the control sample, the y axis is to process the sample. Given an invalid gene expression,the web application will return a page informing the user to provide the correct format.</p>
+</div>
+</div>
+<div class="section" id="system-definitions">
+<h1>2.System Definitions<a class="headerlink" href="#system-definitions" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="source-and-background-of-the-project">
+<h2>2.1 Source and background of the project<a class="headerlink" href="#source-and-background-of-the-project" title="Permalink to this headline">¶</a></h2>
+<p>The project is an Online Test Genes System for Little Hill Laboratory in Zhejiang. The Laboratory need identifying differentially expressed genes given a gene expression file containing two cell samples, but the process of processing data is complex and takes a long time to get result, so the Laboratory needs a system to ?processing data quickly and  out display the result clearly by scatter diagram and table.</p>
+</div>
+<div class="section" id="user-characteristics">
+<h2>2.2 User characteristics<a class="headerlink" href="#user-characteristics" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>Biologists in our lab</li>
+<li>end-users</li>
+<li>web site maintainers</li>
+<li>Potential user</li>
+</ul>
+<p>Student or teacher who study in the field of biological genetics</p>
+</div>
+<div class="section" id="structure-of-the-system">
+<h2>2.3 Structure of the system<a class="headerlink" href="#structure-of-the-system" title="Permalink to this headline">¶</a></h2>
+<p>Based on the description of the user, the system should be divided into two parts: client and server. Client upload gene expression file and then the server read the file to process data. Their relation are described as following:</p>
+<div class="section" id="data-flow-diagrams">
+<h3>2.3.1 data flow diagrams<a class="headerlink" href="#data-flow-diagrams" title="Permalink to this headline">¶</a></h3>
 <img alt="_images/dataflow.jpg" src="_images/dataflow.jpg" />
 </div>
+<div class="section" id="iop-diagram-input-process-output">
+<h3>2.2.2 IOP diagram (Input Process Output)<a class="headerlink" href="#iop-diagram-input-process-output" title="Permalink to this headline">¶</a></h3>
+<img alt="_images/diagram.jpg" src="_images/diagram.jpg" />
 </div>
-<div class="section" id="indices-and-tables">
-<h1>Indices and tables<a class="headerlink" href="#indices-and-tables" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="screen-sketches">
+<h3>2.2.3 Screen sketches<a class="headerlink" href="#screen-sketches" title="Permalink to this headline">¶</a></h3>
+<img alt="_images/screen.jpg" src="_images/screen.jpg" />
+<p>The application has a simple interface with only one button. Our scientists can upload a plain text file containing two samples of gene expression levels representing two experimental conditions.</p>
+</div>
+</div>
+</div>
+<div class="section" id="running-environment">
+<h1>3.Running Environment<a class="headerlink" href="#running-environment" title="Permalink to this headline">¶</a></h1>
+<p>The running environment of this project includes hardware environment, software environment and network environment.</p>
+<div class="section" id="network-environment">
+<h2>3.1 Network Environment<a class="headerlink" href="#network-environment" title="Permalink to this headline">¶</a></h2>
+<p>Users can access this system through the network. Users can upload the file to network and network will response a table of differentially expressed genes and a scatter plot.</p>
+<img alt="_images/net.jpg" src="_images/net.jpg" />
+</div>
+</div>
+<div class="section" id="functional-requirements">
+<h1>4.Functional Requirements<a class="headerlink" href="#functional-requirements" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="data-verification">
+<h2>4.1 Data verification<a class="headerlink" href="#data-verification" title="Permalink to this headline">¶</a></h2>
+<p>First, verify the data format in the plain text document. If the data format is correct, it will be stored in the           database, otherwise the user will be informed to provide the correct format.</p>
+</div>
+<div class="section" id="data-processing">
+<h2>4.2 Data processing<a class="headerlink" href="#data-processing" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
-<li><span class="xref std std-ref">genindex</span></li>
-<li><a class="reference internal" href="py-modindex.html"><span class="std std-ref">Module Index</span></a></li>
-<li><a class="reference internal" href="search.html"><span class="std std-ref">Search Page</span></a></li>
-<li><span class="xref std std-ref">genindex</span></li>
-<li><a class="reference internal" href="py-modindex.html"><span class="std std-ref">Module Index</span></a></li>
-<li><a class="reference internal" href="search.html"><span class="std std-ref">Search Page</span></a></li>
-<li><span class="xref std std-ref">genindex</span></li>
-<li><a class="reference internal" href="py-modindex.html"><span class="std std-ref">Module Index</span></a></li>
-<li><a class="reference internal" href="search.html"><span class="std std-ref">Search Page</span></a></li>
-<li><span class="xref std std-ref">genindex</span></li>
-<li><a class="reference internal" href="py-modindex.html"><span class="std std-ref">Module Index</span></a></li>
-<li><a class="reference internal" href="search.html"><span class="std std-ref">Search Page</span></a></li>
+<li>return a table</li>
+<li>The genes differentially expressed genes of scatter plot</li>
+</ul>
+</div>
+<div class="section" id="potential-functional-requirements">
+<h2>4.3 Potential functional requirements<a class="headerlink" href="#potential-functional-requirements" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>Data storage</li>
+</ul>
+<p>According to gene-id, the corresponding genetic data can be saved to facilitate the call and save calculation time. (The gene data may contain the experimental date which Record experimental changes)</p>
+<ul class="simple">
+<li>Data modification</li>
+</ul>
+<p>Modify the corresponding gene data according to gene-id.</p>
+<ul class="simple">
+<li>Data updating</li>
+</ul>
+<p>Update the revised data in time.</p>
+<ul class="simple">
+<li>Data Query</li>
+</ul>
+<p>To find the corresponding gene data according to gene-id.</p>
+<ul class="simple">
+<li>Data security</li>
+</ul>
+<p>Make sure the experimental data are not lost and destroyed.</p>
+</div>
+</div>
+<div class="section" id="main-use-case-of-the-system">
+<h1>5. Main Use Case Of The System<a class="headerlink" href="#main-use-case-of-the-system" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="describe-the-user-case">
+<h2>5.1 Describe the user case:<a class="headerlink" href="#describe-the-user-case" title="Permalink to this headline">¶</a></h2>
+<p>Our scientists uploaded a plain text file containing two samples of gene expression levels representing two experimental conditions.System verifies whether the user input an invalid gene expression, if not the web application will return a page informing the user to provide the correct format.System calculates gene expression.System  will return a table of differentially expressed genes and a scatter plot.</p>
+</div>
+</div>
+<div class="section" id="exceptions-and-handling">
+<h1>6.Exceptions And Handling<a class="headerlink" href="#exceptions-and-handling" title="Permalink to this headline">¶</a></h1>
+<ul class="simple">
+<li>6.1 If the user input an invalid gene expression, the web application will return a page informing the user to provide the correct format.</li>
+<li>6.2 If you run into an unrecoverable system error, you must also ensure that the database is intact.</li>
+</ul>
+</div>
+<div class="section" id="non-functional-requirements">
+<h1>7.Non-functional Requirements<a class="headerlink" href="#non-functional-requirements" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="response-time">
+<h2>7.1 Response Time<a class="headerlink" href="#response-time" title="Permalink to this headline">¶</a></h2>
+<blockquote>
+<div>For critical functions, the system response time should be less than 5 second.</div></blockquote>
+</div>
+<div class="section" id="user-interface">
+<h2>7.2 User Interface<a class="headerlink" href="#user-interface" title="Permalink to this headline">¶</a></h2>
+<blockquote>
+<div>OMG’s user interface design is concise and elegant, the user can according to the mood and personal aesthetic to switch the theme of different style, mostly in the form of simple and comfortable style, interface design is clear, convenient for users to quickly find the corresponding information. All design will be aimed at the user’s needs.The web application has a simple interface with only one button [Upload and Go]. Our scientists uploaded a plain text file containing two samples of gene expression levels representing two experimental conditions. After receiving the document, the software will return a table of differentially expressed genes and scatter plots of these genes, whose X-axis is controlled and the Y-axis is treated. Given an invalid gene expression, the web application will return a page informing the user to provide the correct format.</div></blockquote>
+</div>
+<div class="section" id="confidentiality-policy">
+<h2>7.3 Confidentiality policy<a class="headerlink" href="#confidentiality-policy" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="authority-control">
+<h3>7.3.1 Authority control<a class="headerlink" href="#authority-control" title="Permalink to this headline">¶</a></h3>
+<p>According to the role of different users, set the appropriate permissions, the important operation of the user to do the corresponding log records for the view, the non privileged user prohibit the use of the system.</p>
+</div>
+<div class="section" id="important-data-encryption">
+<h3>7.3.2 Important data encryption<a class="headerlink" href="#important-data-encryption" title="Permalink to this headline">¶</a></h3>
+<p>Some important data are encrypted according to a certain algorithm, such as household registration order, important parameters, etc.</p>
+</div>
+<div class="section" id="data-backup">
+<h3>7.3.3 Data backup<a class="headerlink" href="#data-backup" title="Permalink to this headline">¶</a></h3>
+<p>It allows users to backup and restore data to make up for data damage and loss.</p>
+</div>
+<div class="section" id="log-log">
+<h3>7.3.4 Log log<a class="headerlink" href="#log-log" title="Permalink to this headline">¶</a></h3>
+<p>This system should be able to record all errors occurred during system operation, including native errors and network errors. These error records are easy to find the cause of the error. Logs also record key operational information of users.</p>
+</div>
+<div class="section" id="reduce-the-risk-of-privacy-disclosure">
+<h3>7.3.5 Reduce the risk of privacy disclosure<a class="headerlink" href="#reduce-the-risk-of-privacy-disclosure" title="Permalink to this headline">¶</a></h3>
+<p>In order to prevent unintended actions (such as the “automatic navigation off” command in the field) and the invalid action (a desired “automatic navigation off” command, the failure CSCI must provide security measures.</p>
+</div>
+</div>
+</div>
+<div class="section" id="implementation-constraints">
+<h1>8.Implementation Constraints<a class="headerlink" href="#implementation-constraints" title="Permalink to this headline">¶</a></h1>
+<ul class="simple">
+<li>8.1 Accessible through Firefox, Chrome, and Safari</li>
+<li>8.2 Web space less than 1GB</li>
+<li>8.3 Budget less than 10,000 USD</li>
+<li>8.4 System downtime less than 30 minutes per year</li>
+<li>8.5 The development cycle is short:It requires the developer to plan the time reasonably and achieve multiple tasks concurrently.</li>
+<li>8.6 The methods and techniques adopted are limited: the technical level of the project team members is not mature enough, and multiple technologies and capabilities need to be learned in the development.</li>
+<li>8.7 Time feature:</li>
+</ul>
+<p>There are still some difficulties in ensuring the corresponding speed of the system during peak user time.</p>
+<ul class="simple">
+<li>8.8 Adaptability:</li>
+</ul>
+<p>There may be difficulties in the other operational environment requirements.</p>
+</div>
+<div class="section" id="change-cases">
+<h1>9.Change Cases<a class="headerlink" href="#change-cases" title="Permalink to this headline">¶</a></h1>
+<p>Regularly update.Later versions will be running on more browsers(IE5+ ,NS4+,Mozilla,Opera).Its web space will be bigger than before.System downtime will become less and less as the version improves.Technology and methods will become more and more mature.Even the peak of the network can be easily and easily run.</p>
+</div>
+<div class="section" id="milestones">
+<h1>10.Milestones<a class="headerlink" href="#milestones" title="Permalink to this headline">¶</a></h1>
+<ul class="simple">
+<li>Submit SRS for review by 3 April 2018</li>
+<li>Get SRS approved by 10 April 2018</li>
+<li>Get design done by 17 April 2018</li>
+<li>Get coding done by 1 June 2018</li>
+<li>Acceptance tests by 15 June 2018</li>
+<li>Release by 29 June 2018</li>
+</ul>
+</div>
+<div class="section" id="references">
+<h1>11.References<a class="headerlink" href="#references" title="Permalink to this headline">¶</a></h1>
+<ul class="simple">
+<li>&lt;&lt;A basic Introduction to Software Engineering&gt;&gt;  -Wenhong Tian</li>
+<li>&lt;&lt;Software engineering foundation and case analysis&gt;&gt;   -Achuan Wang</li>
+<li><a class="reference external" href="http://web.uvic.ca/~cshen/seng321/project.html">http://web.uvic.ca/~cshen/seng321/project.html</a></li>
+<li><a class="reference external" href="https://blog.csdn.net/L_chxu/article/details/19899427">https://blog.csdn.net/L_chxu/article/details/19899427</a></li>
+<li><a class="reference external" href="https://wenku.baidu.com/view/4d035e3d9b89680202d82571.html">https://wenku.baidu.com/view/4d035e3d9b89680202d82571.html</a></li>
 </ul>
 </div>
 
